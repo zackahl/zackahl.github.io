@@ -1,0 +1,478 @@
+/* FEATURE */
+
+.feature {
+	text-align: center;
+	height: 100%;
+    position: relative;
+	z-index: 1;
+    border-top: 2px solid $col-pri-d;
+    border-top-style: dashed;
+    p {
+        font-size: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        margin: auto;
+        display: block;
+    }
+    h3 {
+        padding: 10px 10px;
+        background: rgba(255,255,255,0.1);
+        margin-top: 15px;
+        border: 1px solid $col-pri-l;
+        border-bottom: 0px;
+        text-align: center;
+    }
+}
+
+// Heading Block
+
+.heading-block {
+	width: 100%;
+	padding: 10px 20px;
+    border: 1px solid $col-pri-m;
+	color: white;
+	cursor: default;
+	display: inline-block;
+	text-align: center;
+	background: $col-pri-d;
+	-webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.heading-block > a > h2 {
+	-webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.heading-block:hover > a > h2 {
+    color: gold;   
+}
+.heading-block:hover {
+    .divider {
+        margin-left: 5px;
+        padding-right: 5px;
+        border-left: 0px solid white;   
+    }
+}
+
+// Information Layout
+
+.info-group {
+	padding: 75px 150px 75px 150px;
+	width: 100%;
+	opacity: 0;
+}
+.info-section {
+	background: rgba(0,0,0,0.8);
+	z-index: 2;
+	border: 1px solid $col-pri-m;
+    border-top: none;
+    overflow: auto;
+	text-align: left;
+	padding: 0 0 15px 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.info-section:hover {
+	background: rgba(0,0,0,0.9);
+}
+
+// Home
+
+#home {
+    background-color: $col-pri-d;
+	background-image: url(/assets/images/wood1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+    
+    .feature {
+        opacity: 1;
+        height: 100vh;
+        min-height: 500px;
+        position: relative;
+    }
+    .heading-block {
+        border: none;
+        background: transparent;
+        width: auto;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+    }
+    .heading-block:hover {
+        background: transparent;
+        border: none;
+    }
+    a {
+        div {
+            height: 40px;   
+        }
+        -webkit-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+    #logo {
+        display:block;
+        margin:auto;
+    }
+    #home-group {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+// About Me
+
+#about-me {
+    background-color: $col-pri-m;
+    background-image: url(/assets/images/wood2-white.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    
+    img {
+        margin-top: 15px;
+    }
+    h3 {
+        background: black;
+        border: 1px solid $col-pri-l;
+        color: white;
+        margin-bottom: 15px;
+    }
+}
+
+// Skills
+
+#skills {
+    background-color: white;
+    background-image: url(/assets/images/wood2-black.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+    
+    .info-section {
+        background: white;   
+    }
+    .info-section:hover {
+        background: rgba(255,255,255,0.9);   
+    }
+    h3 {
+        background: rgba(0,0,0,0.1);
+        border: 1px solid $col-pri-l;
+        color: black;
+    }
+    img {
+        max-height: 100px;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .skill-btn {
+        height: 150px;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid $col-pri-l;
+        padding: 10px;
+        position: relative;
+        float: left;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .skill-btn:nth-child(n+2) {
+        margin-right: -1px;
+        margin-top: -1px;
+        //outline: 1px solid $col-pri-l;
+    }
+    .skill-btn:hover {
+        background: rgba(255,255,255,1);
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+    .skill-text {
+        opacity: 0;
+        -webkit-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
+        color: white;
+    }
+    .rating-box .skill-text {
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+    }
+    .skill-name {;
+        display: block;
+        height: 0px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: $col-pri-d;
+        text-align: center;
+        -webkit-transition: height 0.3s ease-in-out;
+        transition: height 0.3s ease-in-out;
+        line-height: 25px;
+        overflow: hidden;
+    }
+    .rating-box {
+        opacity: 0;
+        height: 25px;
+        background: $col-pri-d;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        position: absolute;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .rating-bar {
+        display: block;
+        height: 25px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background: black;
+        width: 0%;
+        text-align: center;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        line-height: 25px;
+        border-right: 2px solid white;
+    }
+    .status {
+        display: inline;   
+    }
+    .skill-btn:hover .skill-text {
+        opacity: 1;
+    }
+    .skill-btn:hover .skill-name {
+        height: 25px;
+    }
+    .skill-btn:hover .rating-box{
+        opacity: 1;
+    }
+}
+
+// Projects
+
+#projects {
+    background-color: white;
+    background-image: url(/assets/images/wood2-white.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    
+    h3 {
+        background-color: $col-pri-l;
+        color: black;
+        border-color: $col-pri-m;  
+    }
+    .glyphicon {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .glyphicon:hover {
+        color: white;
+    }
+    .project-btn {
+        background: $col-pri-d;
+        border: 1px solid $col-pri-m;
+        border-bottom: 0px; 
+        padding: 0 0 0 0;
+        position: relative;
+        float: left;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .project-btn:last-child {
+        border-bottom: 1px solid $col-pri-m;   
+    }
+    .project-name {
+        top: 0px;
+        padding: 14px 0px 14px 0px;
+        height: 50px;
+        width: 100%;
+        background: black;
+        border-bottom: 1px solid $col-pri-m;
+    }
+    .project-collapse {
+        float: left;
+        height: 0px;
+        width: 100%;
+        
+        img {
+            width: 100%;
+            height: inherit;
+            position: absolute;
+            display: block;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+        .project-desc {
+            position: absolute;
+            height: 175px;
+            width: 100%;
+            margin: auto;
+            opacity: 0;
+            background: rgba(0,0,0,0.9);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            color: gold;
+            padding: 10px;
+            p {
+                font-size: 16px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%); 
+            }
+        }
+        .project-desc:hover {
+            opacity: 1;
+        }
+    }
+    .show {
+        .project-collapse {
+            height: 175px;
+        }
+        span {
+            -webkit-transform: translateX(10px) translateY(-5px) rotate(180deg);
+            transform: translateX(10px) translateY(-5px) rotate(180deg);
+        }
+        h4 {
+            color: gold;
+        }
+    }
+    .more {
+        background: rgba(255,255,255,0.1);
+        h4 {
+            line-height: 225px;   
+        }
+    }
+    .more:hover {
+        background: $col-pri-d;
+        h4 { 
+            color: gold;
+        }
+    }
+}
+
+// Contact
+
+#contact {
+    background-color: white;
+    background-image: url(/assets/images/wood2-black.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    
+    .info-section {
+        padding: 15px;
+        background: white;
+        text-align: center;
+    }
+    .info-section:hover {
+        background: rgba(255,255,255,0.9);   
+    }
+    p {
+        color: black;
+    }
+    h3 {
+        background: rgba(0,0,0,0.1);
+        border: 1px solid $col-pri-l;
+        color: black;
+        margin: 0px auto 10px auto;
+    }
+}
+
+// Special Classes
+
+.divider {
+    margin-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid white;
+    -webkit-transition: 0.1s ease-in-out;
+	transition: 0.1s ease-in-out; 
+}
+.slogan {
+	color: white;
+    margin-bottom: 10px;
+	padding: 5px 20px;
+	-webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+// Mobile Devices 
+
+@media (max-width: 767px) {
+	.info-group {
+		opacity: 1;
+	    padding: 25px;
+	}
+	#logo { 
+		width: 80%;
+	}
+    .col-xs-12, .col-sm-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+	#development .skill-btn:last-child {
+		width: calc(100% - 1px);
+	}
+    .info-section { 
+		text-align: center;
+        padding: 10px 10px 10px 10px;
+	}
+    #development {
+        h3 {
+            margin-right: 1px;   
+        }
+    }
+    #design {
+        h3 {
+            margin-right: 1px; 
+        }
+        img {
+            max-height: 80px;   
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .info-group {
+		opacity: 1;
+	    padding: 25px;
+	}
+    #skills .status {
+        display: none;  
+    }
+}
+@media (min-width: 768px) {
+    #design .skill-btn {
+        height: 225px;   
+    }
+    #development {
+        padding-right: 7px;
+        h3 {
+            margin-right: 2px;   
+        }
+    }
+    #design {
+        padding-left: 7px;
+        h3 {
+            margin-right: 1px; 
+        }
+    }
+}
