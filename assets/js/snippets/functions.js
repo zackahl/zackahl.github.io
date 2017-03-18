@@ -12,26 +12,34 @@ $(window).load(function() {
 
 // Hide / Show navbar on scroll
 
-var lastScrollTop = 0;
-window.addEventListener("scroll", function() {  
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop) {
-        $(".collapse").removeClass("fadeIn");
-        $(".collapse").addClass("fadeOut");
-        $(".dropdown-menu").removeClass("fadeIn");
-        $(".dropdown-menu").addClass("fadeOut");
-        $(".navbar").removeClass("slideInDown");
-        $(".navbar").addClass("slideOutUp");
-    } else {
-        $(".collapse").removeClass("fadeOut");
-        $(".collapse").addClass("fadeIn");
-        $(".dropdown-menu").removeClass("fadeOut");
-        $(".dropdown-menu").addClass("fadeIn");
-        $(".navbar").removeClass("slideOutUp");
-        $(".navbar").addClass("slideInDown");
-    }
-    lastScrollTop = st;
-}, false);
+$(document).ready(function () {
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {  
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        // Show on scroll up
+        if (st > lastScrollTop) {
+            $(".collapse").removeClass("fadeIn");
+            $(".collapse").addClass("fadeOut");
+            $(".dropdown-menu").removeClass("fadeIn");
+            $(".dropdown-menu").addClass("fadeOut");
+            $(".navbar").removeClass("slideInDown");
+            $(".navbar").addClass("slideOutUp");
+        // Hide on scroll down
+        } else {
+            $(".collapse").removeClass("fadeOut");
+            $(".collapse").addClass("fadeIn");
+            $(".dropdown-menu").removeClass("fadeOut");
+            $(".dropdown-menu").addClass("fadeIn");
+            $(".navbar").removeClass("slideOutUp");
+            $(".navbar").addClass("slideInDown");
+        }
+        lastScrollTop = st;
+    }, false);
+    // Hide collapsed navbar on mobile
+    $('nav').on('click', function() {
+        $(".navbar-collapse").removeClass("in");
+    });
+});
 
 // Smooth scroll to anchor
 
@@ -82,19 +90,19 @@ $(document).ready(function() {
 
 $(document).ready(function () {
     $(".project-name").on('click', function() {
-        // Collapse the project
-        if ($(this).siblings(".project-collapse").height() === 175) {
+        // Collapse up
+        if ($(this).siblings(".project-collapse").height() === 200) {
             $(this).siblings(".project-collapse").animate({ height: 0 }, 300 );
             $(this).find("span").css("-webkit-transform","translateX(0px) translateY(0px) rotate(180deg)");
             $(this).find("span").css("transform","translateX(0px) translateY(0px) rotate(0deg)");
-            $(this).find("h4").css("color","white");
+            $(this).siblings(".project-collapse").find(".project-desc").css("display","none");
         }
-        // Expand the project
-        else {
-            $(this).siblings(".project-collapse").animate({ height: 175 }, 300 );
+        // Collapse down
+        else if ($(this).siblings(".project-collapse").height() === 0) {
+            $(this).siblings(".project-collapse").animate({ height: 200 }, 300 );
             $(this).find("span").css("-webkit-transform","translateX(10px) translateY(-5px) rotate(180deg)");
             $(this).find("span").css("transform","translateX(10px) translateY(-5px) rotate(180deg)");
-            $(this).find("h4").css("color","gold");
+            $(this).siblings(".project-collapse").find(".project-desc").css("display","block");
         }
     });
 });
