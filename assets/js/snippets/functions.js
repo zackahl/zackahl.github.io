@@ -36,7 +36,7 @@ $(document).ready(function () {
         lastScrollTop = st;
     }, false);
     // Hide collapsed navbar on mobile
-    $('nav').on('click', function() {
+    $('.nav>li>a').on('click', function() {
         $(".navbar-collapse").removeClass("in");
     });
 });
@@ -92,14 +92,14 @@ $(document).ready(function () {
     $(".project-name").on('click', function() {
         // Collapse up
         if ($(this).siblings(".project-collapse").height() === 200) {
-            $(this).siblings(".project-collapse").animate({ height: 0 }, 300 );
+            $(this).siblings(".project-collapse").css("height","0px");
             $(this).find("span").css("-webkit-transform","translateX(0px) translateY(0px) rotate(180deg)");
             $(this).find("span").css("transform","translateX(0px) translateY(0px) rotate(0deg)");
             $(this).siblings(".project-collapse").find(".project-desc").css("display","none");
         }
         // Collapse down
         else if ($(this).siblings(".project-collapse").height() === 0) {
-            $(this).siblings(".project-collapse").animate({ height: 200 }, 300 );
+            $(this).siblings(".project-collapse").css("height","200px");
             $(this).find("span").css("-webkit-transform","translateX(10px) translateY(-5px) rotate(180deg)");
             $(this).find("span").css("transform","translateX(10px) translateY(-5px) rotate(180deg)");
             $(this).siblings(".project-collapse").find(".project-desc").css("display","block");

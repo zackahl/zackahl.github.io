@@ -81,7 +81,7 @@
 // Home
 
 #home {
-    background-color: black;
+    background-color: $col-pri-d;
 	background-image: url(/assets/images/wood1.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -313,8 +313,9 @@
         cursor: pointer;
     }
     .project-name:hover {
-        h4 {
-            color: gold;   
+		background: $col-pri-l;
+        .glyphicon, h4 {
+            color: black;   
         }
     }
     .project-collapse {
@@ -322,6 +323,8 @@
         height: 0px;
         width: 100%;
         background-color: $col-pri-l;
+		-webkit-transition: 0.3s ease-in-out;
+		transition: 0.3s ease-in-out;
 
         img {
             display: block;
@@ -337,10 +340,10 @@
             height: 200px;
             width: 100%;
             opacity: 0;
-            background: rgba(0,0,0,0.9);
-            -webkit-transition: 0.3s ease-in-out;
-            transition: 0.3s ease-in-out;
-            color: gold;
+            background: rgba(255,255,255,0.8);
+			-webkit-transition: 0.6s ease-in-out;
+			transition: 0.6s ease-in-out;
+            color: black;
             padding: 10px;
             p {
                 font-size: 16px;
@@ -359,6 +362,7 @@
                 padding: 5px;
                 background: rgba(0,0,0,0.9);
                 -webkit-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
             }
             a:hover {
                 background: $col-pri-d;
@@ -367,18 +371,6 @@
         }
         .project-desc:hover {
             opacity: 1;
-        }
-    }
-    .show {
-        .project-collapse {
-            height: 200px;
-            .project-desc {
-                display: block;
-            }
-        }
-        span {
-            -webkit-transform: translateX(10px) translateY(-5px) rotate(180deg);
-            transform: translateX(10px) translateY(-5px) rotate(180deg);
         }
     }
     .more {
@@ -485,65 +477,64 @@
         background: black;
         border: none;
     }
-	.info-group {
-		opacity: 1;
-	    padding: 0px;
-	}
-	#logo { 
-		width: 80%;
-	}
-    .col-xs-12, .col-sm-12 {
+	.col-xs-12, .col-sm-12 {
         padding-left: 0px;
         padding-right: 0px;
     }
-	#development .skill-btn:last-child {
-		width: calc(100% - 1px);
+	#home {
+		display: none;
 	}
-    #development {
-        h3 {
-            margin-right: 1px;   
-        }
-    }
-    #design {
-        h3 {
-            margin-right: 1px; 
-        }
-        img {
-            max-height: 80px;   
-        }
-    }
     #about-me, #skills, #projects, #contact {
         background-image: none;  
         h3 {
-            background: $col-pri-d;
+            background: black;
             color: white;
         }
+		.info-group {
+			opacity: 1;
+			padding: 0px;
+		}
+		.info-section, .info-section:hover {
+			background: white;
+			background: -webkit-linear-gradient(top, $col-pri-m 50%,white 100%);
+			background: linear-gradient(to bottom, $col-pri-m 50%,white 100%);
+			color: black;
+			border: none;
+			padding: 0px 25px 15px 25px;
+			text-align: center;
+		}
     }
-    .info-section {
-        background: white;
-        color: black;
-        z-index: 2;
-        border: none;
-        border-top: none;
-        overflow: auto;
-        text-align: left;
-        padding: 0px 25px 15px 25px;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-        text-align: center;
-    }
-    .info-section:hover {
-        background: white;
-    }
+	#about-me {
+		margin-top: 50px;
+	}
+	#skills {
+		#development .skill-btn:last-child {
+			width: calc(100% - 1px);
+		}
+		#development, #design {
+			h3 {
+				margin-right: 1px;   
+			}
+		}
+		#design {
+			img {
+				max-height: 80px;   
+			}
+		}
+		.skill-name {
+			height:25px;
+			.skill-text {
+				opacity: 1;
+			}
+		}
+	}
     #projects {
         .project-btn {
             border: none;   
         }
-        .project-name {
+        .project-name, .more {
+			border: 1px solid $col-pri-l;
             background: white;
-            outline: 1px solid $col-pri-m;
-            border-left: 1px solid $col-pri-m;
-            border-right: 1px solid $col-pri-m;
             h4 {
                 color: black;
             }
@@ -551,37 +542,33 @@
                 color: black;   
             }
         }
-        .project-name:hover {
-            background: $col-pri-m;
-            h4 {
-                color: white;
-            }
-            .glyphicon {
-                color: white;   
-            }
-        }
-        .more {
+        .project-name:hover, .more:hover {
             background: $col-pri-l;
             h4 {
+                color: black;
+            }
+            .glyphicon {
                 color: black;   
             }
         }
-        .more:hover {
-            h4 { 
-                color: gold;
-            }
-        }
-        .show {
-            .project-collapse {
-                height: 0px;
-                .project-desc {
-                    display: none;
-                }
-            }
-            span {
-                -webkit-transform: none;
-                transform: none;
-            }
-        }
+		.project-collapse {
+			background-color: white;
+			img {
+				display: none;	
+			}
+			.project-desc {
+				opacity: 1;
+				border: 1px solid $col-pri-l;
+				border-top: none;
+			}
+		}
     }
+	#contact {
+		.info-section {
+			padding-top: 15px;
+		}
+		h3 {
+			margin: 15px;
+		}
+	}
 }
