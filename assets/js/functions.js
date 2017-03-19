@@ -90,22 +90,11 @@ $(document).ready(function() {
     $('#illustrator').hover(function(){$('#illustrator-rating').css('width','60%');},function(){$('#illustrator-rating').css('width','0%');});
 });
 
-// Project button collapse
-$(document).ready(function () {
-    $(".project-name").on('click', function() {
-        // Collapse up
-        if ($(this).siblings(".project-collapse").height() === 200) {
-            $(this).siblings(".project-collapse").css("height","0px");
-            $(this).find("span").css("-webkit-transform","translateX(0px) translateY(0px) rotate(180deg)");
-            $(this).find("span").css("transform","translateX(0px) translateY(0px) rotate(0deg)");
-            $(this).siblings(".project-collapse").find(".project-desc").css("display","none");
-        }
-        // Collapse down
-        else if ($(this).siblings(".project-collapse").height() === 0) {
-            $(this).siblings(".project-collapse").css("height","200px");
-            $(this).find("span").css("-webkit-transform","translateX(10px) translateY(-5px) rotate(180deg)");
-            $(this).find("span").css("transform","translateX(10px) translateY(-5px) rotate(180deg)");
-            $(this).siblings(".project-collapse").find(".project-desc").css("display","block");
-        }
-    });
-});
+/*
+// Collapse up
+$(this).find("span").css("-webkit-transform","translateX(0px) translateY(0px) rotate(180deg)");
+$(this).find("span").css("transform","translateX(0px) translateY(0px) rotate(0deg)");
+// Collapse down
+$(this).find("span").css("-webkit-transform","translateX(10px) translateY(-5px) rotate(180deg)");
+$(this).find("span").css("transform","translateX(10px) translateY(-5px) rotate(180deg)");
+*/

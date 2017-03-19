@@ -140,6 +140,7 @@
 	background-attachment: fixed;
     
     img {
+        width: 350px;
         margin-top: 15px;
     }
     h3 {
@@ -166,6 +167,8 @@
         color: black;
     }
     img {
+        height: 100px;
+        width: auto;
         max-height: 100px;
         position: relative;
         top: 50%;
@@ -277,114 +280,86 @@
     h3 {
         background-color: $col-pri-l;
         color: black;
-        border-color: $col-pri-m;  
+        border: 0px;
+        margin-bottom: 10px;
     }
     h4 {
-        color: white;
+        color: black;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
     .glyphicon {
         font-size: 16px;
         padding-left: 10px;
+        color: black;
     }
     .glyphicon:hover {
         color: white;
     }
-    .project-btn {
-        background: $col-pri-d;
-        padding: 0 0 0 0;
-        margin-top: 10px;
-        position: relative;
-        float: left;
-        text-align: center;
-        color: white;
-        font-size: 1.5rem;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
+    .panel-group {
+        margin: 0px 0 0 0;   
     }
-    .project-name {
-        top: 0px;
-        padding: 14px 0px 14px 0px;
+    .panel {
+        margin: 0px 0 0 0; 
+        border-radius: 0px; 
+        border: 0px;
+        border-bottom: 1px solid $col-pri-l;
+    }
+    .panel-heading {
+        cursor: pointer;
+        color: black;
+        background: white;
         height: 50px;
-        width: 100%;
-        background: black;
-        border: 1px solid $col-pri-m;
+        border-radius: 0px;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
-        cursor: pointer;
+        padding-left: 0px;
+        padding-right: 0px;
     }
-    .project-name:hover {
-		background: $col-pri-l;
-        .glyphicon, h4 {
-            color: black;   
-        }
-    }
-    .project-collapse {
-        float: left;
-        height: 0px;
-        width: 100%;
-        background-color: $col-pri-l;
-		-webkit-transition: 0.3s ease-in-out;
-		transition: 0.3s ease-in-out;
-
-        img {
-            display: block;
-            width: 100%;
-            height: inherit;
-            position: absolute;
-            -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-        }
-        .project-desc {
-            display: none;
-            position: absolute;
-            height: 200px;
-            width: 100%;
-            opacity: 0;
-            background: rgba(255,255,255,0.8);
-			-webkit-transition: 0.6s ease-in-out;
-			transition: 0.6s ease-in-out;
-            color: black;
-            padding: 10px;
-            p {
-                font-size: 16px;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%); 
-            }
-            a {
-                cursor: pointer;
-                position: relative;
-                background: black;
-                color: white;
-                font-size: 12px;
-                border: 1px solid white;
-                border-radius: 5px;
-                padding: 5px;
-                background: rgba(0,0,0,0.9);
-                -webkit-transition: 0.3s ease-in-out;
-				transition: 0.3s ease-in-out;
-            }
-            a:hover {
-                background: $col-pri-d;
-                font-size: 12px;
-            }
-        }
-        .project-desc:hover {
-            opacity: 1;
-        }
-    }
-    .more {
-        margin-top: 10px;
-        background: rgba(255,255,255,0.1);
-        cursor: pointer;
-        h4 {
-            line-height: 50px;   
-        }
-    }
-    .more:hover {
+    .panel-heading:hover {
         background: $col-pri-d;
+        .glyphicon, h4 {
+            color: white;   
+        }
+        span {
+            -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+        }
+    }
+    .panel-heading {
+        span {
+            -webkit-transform: translateX(10px) translateY(-3px) rotate(180deg);
+            transform: translateX(10px) translateY(-3px) rotate(180deg);
+        }
+    }
+    .panel-title {
+        font-size: 1.3rem; 
+        text-align: center;
+    }
+    .panel-body {
+        height: 125px;
+        font-size: 16px;
+    }
+    .panel-footer {
+        height: 50px;
+        a {
+            cursor: pointer;
+            background: black;
+            color: white;
+            font-size: 14px;
+            border-radius: 5px;
+            padding: 5px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        a:hover {
+            background: $col-pri-d;
+            font-size: 14px;
+        }
+    }
+    .panel-collapse {
+        text-align: center;
+        color: black;   
     }
 }
 
@@ -552,39 +527,4 @@
             border: none;   
         }
 	}
-    #projects {
-        .project-btn {
-            border: none;   
-        }
-        .project-name, .more {
-			border: 1px solid $col-pri-l;
-            background: white;
-            h4 {
-                color: black;
-            }
-            .glyphicon {
-                color: black;   
-            }
-        }
-        .project-name:hover, .more:hover {
-            background: $col-pri-l;
-            h4 {
-                color: black;
-            }
-            .glyphicon {
-                color: black;   
-            }
-        }
-		.project-collapse {
-			background-color: white;
-			img {
-				display: none;	
-			}
-			.project-desc {
-				opacity: 1;
-				border: 1px solid $col-pri-l;
-				border-top: none;
-			}
-		}
-    }
 }
