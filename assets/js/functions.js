@@ -9,6 +9,13 @@ $(window).on('load', function () {
     $(".se-pre-con").fadeOut("slow");
 });
 
+// Load images when they are needed
+$(function() {
+    $("img.lazy").lazyload({
+        effect : "fadeIn"
+    });
+});
+
 // Add toggle to mobile views
 $(document).ready(function () {
 	'use strict';
@@ -65,9 +72,9 @@ $(document).ready(function() {
     $(window).scroll( function() {
         // Check the location of each desired element
         $('.info-group').each( function() {
-            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/5);
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/1.5);
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is one third visible in the window, fade it it */
+            // If the object is one third visible in the window, fade it it
             if( bottom_of_window > bottom_of_object ) {
                 $(this).animate({'opacity':'1'},500);
             }
