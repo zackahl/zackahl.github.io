@@ -79,6 +79,13 @@
 .info-section:hover {
 	background: rgba(0,0,0,0.9);
 }
+.divider {
+    margin-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid white;
+    -webkit-transition: 0.1s ease-in-out;
+	transition: 0.1s ease-in-out; 
+}
 
 // Home
 
@@ -100,19 +107,20 @@
         border: none;
         background: transparent;
         width: auto;
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.3s;
     }
     .heading-block:hover {
         background: transparent;
         border: none;
     }
+    .slogan {
+        color: white;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+    }
     a {
         div {
             height: 40px;   
         }
-        -webkit-animation-delay: 0.9s;
-        animation-delay: 0.9s;
     }
     img {
         margin-bottom: 20px;
@@ -389,23 +397,6 @@
         color: black;
         margin: 0px auto 10px auto;
     }
-}
-
-// Special Classes
-
-.divider {
-    margin-left: 10px;
-    padding-right: 10px;
-    border-left: 2px solid white;
-    -webkit-transition: 0.1s ease-in-out;
-	transition: 0.1s ease-in-out; 
-}
-.slogan {
-	color: white;
-    margin-bottom: 10px;
-	padding: 5px 20px;
-	-webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
 }
 
 // Mobile Devices 
