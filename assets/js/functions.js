@@ -97,11 +97,9 @@ $(document).ready(function() {
     $('#illustrator').hover(function(){$('#illustrator-rating').css('width','60%');},function(){$('#illustrator-rating').css('width','0%');});
 });
 
-/*
-// Collapse up
-$(this).find("span").css("-webkit-transform","translateX(0px) translateY(0px) rotate(180deg)");
-$(this).find("span").css("transform","translateX(0px) translateY(0px) rotate(0deg)");
-// Collapse down
-$(this).find("span").css("-webkit-transform","translateX(10px) translateY(-5px) rotate(180deg)");
-$(this).find("span").css("transform","translateX(10px) translateY(-5px) rotate(180deg)");
-*/
+// Add active class to dropdown
+$(document).ready(function() {
+    $('.panel-heading').on('click', function() {
+        $(this).toggleClass('active');
+    });
+});
