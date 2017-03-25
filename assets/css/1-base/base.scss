@@ -3,24 +3,28 @@
 /* VARIABLES */
 
 // Font Family
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
-$font-pri: 'Quicksand', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Rock+Salt|Varela+Round');
+$font-primary: 'Varela Round', sans-serif;
+$font-impact: 'Holtwood One SC', serif;
+$font-fancy: 'Rock Salt', cursive;
 
 // Primary colour
-$col-pri-l: #c0c0c0;
-$col-pri-m: #868686;
-$col-pri-d: #4c4c4c;
+
+$col-pri-l: #c9c9c9;
+$col-pri-m: #4d4d4d;
+$col-pri-d: #262626;
+$col-highlight: #40E89A;
 
 // Basic Styles
 
 html {
-    font-family: $font-pri;
     min-height: 100%;
     background: black;
 	font-size: 16px;
 }
 body {
-    font-family: $font-pri;
+    font-family: $font-primary;
 	color: white;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
@@ -36,12 +40,21 @@ body {
 }
 
 // Typography
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+    display: inline-block; 
+    width: 100%;
+}
 h1 {
-    color: white;
-    font-size: 2.5rem;
+    font-family: $font-impact;
+    font-size: 5rem;
+    margin-bottom: 20px;
 }
 h2 {
+    font-family: $font-fancy;
     font-size: 2rem;
+    padding: 10px;
+    margin: 0px;
 }
 h3 {
     font-size: 1.5rem;    
@@ -49,31 +62,26 @@ h3 {
 h4 {
     font-size: 1.3rem;    
 }
-h1, h2, h3, h4, h5, h6 {
-	color: white;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-p, li, ul, ol {
+a, p, li, ul, ol {
 	font-size: 1rem; 
 }
 a {
-    color: #b49800;
+    color: $col-highlight;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 a:hover {
     color: black;
 }
-.glyphicon {
+.glyphicon, .ion {
     color: white;
     font-size: 30px; 
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
-.glyphicon:hover {
-    color: gold; 
+.glyphicon:hover, .ion:hover {
+    color: $col-highlight; 
     font-size: 36px; 
 }
 
@@ -98,8 +106,8 @@ a {
 .no-margin {
     margin: 0 0 0 0;
 }
-.font-gold {
-	color: gold;
+.font-highlight {
+	color: $col-highlight;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
@@ -115,7 +123,7 @@ a {
     left: 100px;
     top: 0;
 }
-.se-pre-con {
+.loader {
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -138,7 +146,7 @@ a {
 }
 ::-webkit-scrollbar-thumb
 {
-	background-color: $col-pri-l;
+	background-color: $col-highlight;
 }
 ::-webkit-scrollbar-thumb:hover {
 	background-color: white;

@@ -1,34 +1,59 @@
 /* NAVIGATION */
 
-// Navbar
+// Basic Layout
 
 .navbar {
-    background-color: #000;
-    border-bottom: solid 2px white;
+    margin: 0 0 0 0;
+    border: none;
+    min-height: auto;
+    padding: 0px 10vw 0px 10vw;
+    font-family: 'Rock Salt', cursive;
+    background-color: transparent;
     color: white;
-    line-height: 45px;
+	-webkit-transition: 0.8s ease-in-out;
+	transition: 0.8s ease-in-out;
     max-height: 50px;
-	-webkit-transition: 0.3s ease-in-out;
-	transition: 0.3s ease-in-out;
-}
-.navbar:hover {
-	border-bottom: solid 2px gold;
 }
 .navbar-header {
-    height: 50px;
+    float: left;
+    .navbar-brand {
+        float: left;
+        line-height: 50px;
+        height: auto;
+        font-size: 1rem;
+        padding: 0px 0px;
+        color: white;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .navbar-brand:hover, .navbar-brand:focus {
+        color: $col-highlight;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
 }
 .navbar-collapse {
-    border: none;
-}
-
-// Nav logo
-
-#nav-logo {
-    margin-left: 150px;
-    line-height: 47px;
-    z-index: 999;
+    float: right;
+    .nav > li > a:hover, .nav > li > a:focus, #nav-logo:hover {
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: $col-highlight;
     -webkit-transition: 0.3s ease-in-out;
-	transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    }
+    .nav > li:hover {
+    text-decoration: none;
+    }
+    .navbar-nav > li > a {
+    color: white;
+    padding: 0px 15px 0px 15px;
+    line-height: 50px;
+    }
+    .nav, .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    }
 }
 
 // Scroll
@@ -37,7 +62,6 @@
     position: fixed;
     right: 0;
     margin-right: 150px;
-    line-height: 47px;
     background-color: transparent;
     display: block;
     width: 30px;
@@ -47,134 +71,81 @@
 	transition: 0.3s ease-in-out;
 }
 
-// Toggle
+// Mobile Devices
 
-.navbar-toggle > .icon-bar {
-	display: block;
-	width: 22px;
-	height: 2px;
-	border-radius: 1px;
-	background-color: white;
-	-webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}
-button:hover > .icon-bar {
-	background-color: $col-pri-l;
-}
-
-// Dropdown
-
-.nav > li.dropdown a {
-    color: white;
-    background-color: transparent;
-    padding-right: 0px;
-    padding-left: 0px;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}
-.nav > li.dropdown > a:hover, .nav > li.dropdown > a:focus {
-    font-size: 18px;
-    color: gold;
-    background-color: $col-pri-d;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}  
-.nav > .dropdown > .dropdown-menu {
-    width: 100%;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    font-size: 16px;
-	background-color: transparent;
-    -webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-}
-.nav > .dropdown > .dropdown-menu > li > a {
-    padding: 10px;
-	color: white;
-}
-.nav > .dropdown > .dropdown-menu > li > a:hover {
-    font-size: 18px;
-	color: gold;
-}  
-.nav > .dropdown > .dropdown-menu > li {
-    background-color: black;
-    height: 100%;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}
-.nav > .dropdown > .dropdown-menu > li:hover {
-    background-color: $col-pri-d;
-}
-.nav > li:hover {
-    text-decoration: none;
-}
-.nav > li.open > a.dropdown-toggle{
-    background-color: transparent;
-}
-.nav > li.open {
-	color: gold;
-}
-.navbar-nav > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    line-height: 48px;
-}
-
-// Desktop
-
-@media (min-width: 768px) {
-	.nav > .dropdown:hover > .dropdown-menu {
-		display: block;
+@media (max-width: 767px) {
+    
+    // Basic Layout
+    .navbar {
+        padding: 0px 0px 0px 0px;
+        background: black;
+    }
+    .navbar-header {
+        border-bottom: 2px solid white;
+        padding: 0px 10% 0px 10%;
+        width: 100%;
+        button {
+            float: right;
+            margin-right: 0px;
+            padding-right: 0px;
+        }
+        // Toggle
+        .navbar-toggle > .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: white;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        button:hover > .icon-bar {
+            background-color: $col-highlight;
+        }
+    }
+    .navbar-collapse {
+        margin-top: -1px;
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        .navbar-nav {
+            margin-top: 0px;
+            width: 100%;
+            background: black;
+        }
+        .navbar-nav > li {
+            width: 100%;
+            padding: 0px 10% 0px 10%;
+        }
+        .navbar-nav > li > a {
+            padding-left: 0px;   
+        }
+    }
+    
+    // Dropdown
+	.dropdown {
+    	background-color: black;
+	}
+    .nav > .dropdown:hover > .dropdown-menu {
+        display: block;
     }
     .nav > .dropdown {
         width: 25%
-	}
-    .nav, .navbar-nav {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-    }
-    .navbar {
-        text-align: center;
     }
     .nav > .dropdown > .dropdown-menu > li {
         text-align: center;
     }  
-	.nav > .dropdown > .dropdown-menu {
-		text-align: center;
-		border: solid 2px gold;
-	}
-	.nav > .dropdown > .dropdown-menu > li:nth-of-type(-n+2) {
-		border-bottom: solid 2px gold;
-	}
-}
-
-// Mobile Devices
-
-@media (max-width: 767px) {
-	.dropdown {
-    	background-color: black;
-	}
-	.navbar-nav {
-		border-bottom: 1px solid gold;
-        margin-top: 0px;
-	}
-	.nav > .dropdown > .dropdown-menu > li:nth-of-type(-n+2) {
-		border-bottom: solid 1px gold;
-	}
+    .nav > .dropdown > .dropdown-menu {
+        text-align: center;
+        border: solid 2px $col-highlight;
+    }
+    .nav > li {
+        background-color: black;
+    }
     .nav > li:hover {
         background-color: $col-pri-d;
     }
     .nav > li.dropdown a {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-    #nav-logo {
-        margin-left: 25px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
-    #scroll {
-        left: calc(50% - 15px);
-        padding-right: 0px;
-	}
 }

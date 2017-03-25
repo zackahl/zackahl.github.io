@@ -6,8 +6,8 @@
 	color: white;
 	padding-top: 5px;
 	padding-bottom: 5px;
-    padding-left: 125px;
-	padding-right: 125px;
+    padding-left: 10vw;
+	padding-right: 10vw;
 	line-height: 40px;
     bottom: 0 !Important;
 	border-top: 2px solid white;
@@ -16,6 +16,7 @@
 // Social Media Buttons
 
 #social-media {
+    padding: 0 0 0 0;
     text-align: left;
     a {
         padding-right: 10px;
@@ -29,40 +30,56 @@
         transition: 0.3s ease-in-out;
     }
     img:hover {
-        background: $col-pri-d;
+        background: $col-highlight;
     }
 }
 
 // Bottom Page Navigation
 
 #bot-nav {
+    font-family: $font-fancy;
+    padding: 0 0 0 0;
     text-align: center;
     a {
+        padding: 0px 3px 0px 3px;
+        font-size: 0.7rem;
         color: white;
         text-decoration: none;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
      a:hover {
-        font-size: 110%;
-        color: gold;
+        font-size: 0.8rem;
+        color: $col-highlight;
     }
 }
 
 // Copyright
 
 #copyright {
+    padding: 0 0 0 0;
     text-align: right;
 }
 
 // Mobile Devices
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #footer {
         padding-left: 0px;
 	    padding-right: 0px;
     }
 	#social-media,#bot-nav,#copyright {
         text-align: center;
+    }
+    #social-media {
+        margin-bottom: 10px;   
+    }
+    #bot-nav {
+        a {
+            font-size: 0.5rem;
+        }
+         a:hover {
+            font-size: 0.6rem;
+        }
     }
 }

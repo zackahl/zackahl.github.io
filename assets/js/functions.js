@@ -6,7 +6,7 @@ $
 // Loader
 $(window).on('load', function () {
     // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");
+    $(".loader").fadeOut("slow");
 });
 
 // Load images when they are needed
@@ -32,19 +32,25 @@ $(document).ready(function () {
     var lastScrollTop = 0;
     window.addEventListener("scroll", function() {  
         var st = window.pageYOffset || document.documentElement.scrollTop;
-        // Show on scroll up
         if($(window).width() > 767) {
+            // Show on scroll up
             if (st > lastScrollTop) {
                 $(".collapse").addClass("fadeOut");
                 $(".dropdown-menu").removeClass("fadeIn");
                 $(".navbar").removeClass("slideInDown");
                 $(".navbar").addClass("slideOutUp");
+                $(".navbar").css({"background":"transparent","border-bottom":"0px"});
             // Hide on scroll down
             } else {
                 $(".collapse").removeClass("fadeOut");
                 $(".collapse").addClass("fadeIn");
                 $(".navbar").removeClass("slideOutUp");
                 $(".navbar").addClass("slideInDown");
+                $(".navbar").css({"background":"black","border-bottom":"4px solid white"});
+            }
+            // Remove style at page top
+            if(st < 100) {
+                $(".navbar").css({"background":"transparent","border-bottom":"0px solid transparent"});
             }
         }
         lastScrollTop = st;
