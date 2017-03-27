@@ -72,24 +72,6 @@ $(document).ready(function () {
 	});
 });
 
-// Fade in feature items
-$(document).ready(function() {
-    if($(window).width() > 767) {
-        // Every time the window is scrolled
-        $(window).scroll( function() {
-            // Check the location of each desired element
-            $('.info-group').each( function() {
-                var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/1.5);
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                // If the object is one third visible in the window, fade it it
-                if( bottom_of_window > bottom_of_object ) {
-                    $(this).animate({'opacity':'1'},500);
-                }
-            }); 
-        });
-    }
-});
-
 // Rating bar animation
 $(document).ready(function() {
 	$('#html').hover(function(){$('#html-rating').css('width','90%');},function(){$('#html-rating').css('width','0%');});

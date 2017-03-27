@@ -19,18 +19,12 @@
     padding: 0 0 0 0;
     text-align: left;
     a {
+        font-size: 1.5rem;
         padding-right: 10px;
+        color: white;
     }
-    img {
-        height: 40px;
-        width: 40px;
-        cursor: pointer;
-        border-radius: 40px;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
-    img:hover {
-        background: $col-highlight;
+    a:hover {
+        color: $col-highlight;
     }
 }
 
@@ -49,7 +43,6 @@
         transition: 0.3s ease-in-out;
     }
      a:hover {
-        font-size: 0.8rem;
         color: $col-highlight;
     }
 }
@@ -71,15 +64,7 @@
 	#social-media,#bot-nav,#copyright {
         text-align: center;
     }
-    #social-media {
-        margin-bottom: 10px;   
-    }
     #bot-nav {
-        a {
-            font-size: 0.5rem;
-        }
-         a:hover {
-            font-size: 0.6rem;
-        }
+        display: none;
     }
 }

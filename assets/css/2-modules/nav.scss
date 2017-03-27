@@ -29,13 +29,11 @@
     .navbar-brand:hover, .navbar-brand:focus {
         color: $col-highlight;
         text-decoration: none;
-        font-size: 1.1rem;
     }
 }
 .navbar-collapse {
     float: right;
     .nav > li > a:hover, .nav > li > a:focus, #nav-logo:hover {
-    font-size: 1.1rem;
     background-color: transparent;
     color: $col-highlight;
     -webkit-transition: 0.3s ease-in-out;

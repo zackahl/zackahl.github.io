@@ -21,7 +21,7 @@ $col-highlight: #40E89A;
 html {
     min-height: 100%;
     background: black;
-	font-size: 16px;
+	font-size: 14px;
 }
 body {
     font-family: $font-primary;
@@ -60,7 +60,7 @@ h3 {
     font-size: 1.5rem;    
 }
 h4 {
-    font-size: 1.3rem;    
+    font-size: 1.2rem;    
 }
 a, p, li, ul, ol {
 	font-size: 1rem; 
@@ -71,6 +71,7 @@ a {
     transition: 0.3s ease-in-out;
 }
 a:hover {
+    text-decoration: none;
     color: black;
 }
 .glyphicon, .ion {
