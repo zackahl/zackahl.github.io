@@ -46,7 +46,7 @@ $(document).ready(function () {
                 $(".collapse").addClass("fadeIn");
                 $(".navbar").removeClass("slideOutUp");
                 $(".navbar").addClass("slideInDown");
-                $(".navbar").css({"background":"black","border-bottom":"4px solid white"});
+                $(".navbar").css({"background":"black","border-bottom":"2px solid white"});
             }
             // Remove style at page top
             if(st < 100) {
@@ -61,7 +61,7 @@ $(document).ready(function () {
     });
 });
 
-// Smooth scroll to anchor
+// Smooth scroll to anchor on click
 $(document).ready(function () {
 	$('body a').on('click', function(event) {
         // If anchor is not external
@@ -70,6 +70,38 @@ $(document).ready(function () {
             $('body').animate({scrollTop:$(this.hash).offset().top}, 500);
         }
 	});
+});
+
+// Smooth scroll to anchor on mousewheel
+/*$(document).ready(function () {
+    if ($(window).width() > 767) {
+        $('.row').on('mousewheel', function(e){
+            e.preventDefault();
+            if(e.originalEvent.wheelDelta < 0) {
+                 if (!$(this).is(':last-child')){
+                $('body').scrollTop($(this).next().offset().top);}
+            } else {
+                    if (!$(this).is(':first-child')){
+                    $('body').scrollTop($(this).prev().offset().top);}
+            }
+        });
+    }
+});*/
+
+// Fade in feature items
+$(document).ready(function() {
+    // Every time the window is scrolled
+    $(window).scroll( function() {
+        // Check the location of each desired element
+        $('.container-fluid').each( function() {
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/2);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            // If the object is half visible in the window, fade it in
+            if( bottom_of_window > bottom_of_object ) {
+                $(this).animate({'opacity':'1'},500);
+            }
+        }); 
+    });
 });
 
 // Rating bar animation

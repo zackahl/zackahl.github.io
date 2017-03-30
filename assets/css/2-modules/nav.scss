@@ -7,7 +7,7 @@
     border: none;
     min-height: auto;
     padding: 0px 10vw 0px 10vw;
-    font-family: 'Rock Salt', cursive;
+    font-family: $font-secondary;
     background-color: transparent;
     color: white;
 	-webkit-transition: 0.8s ease-in-out;
@@ -20,7 +20,7 @@
         float: left;
         line-height: 50px;
         height: auto;
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0px 0px;
         color: white;
         -webkit-transition: 0.3s ease-in-out;

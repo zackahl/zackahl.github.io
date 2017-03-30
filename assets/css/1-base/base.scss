@@ -4,17 +4,17 @@
 
 // Font Family
 
-@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Rock+Salt|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round|Fugaz+One|Monoton');
 $font-primary: 'Varela Round', sans-serif;
-$font-impact: 'Holtwood One SC', serif;
-$font-fancy: 'Rock Salt', cursive;
+$font-secondary: 'Fugaz One', cursive;
+$font-impact: 'Monoton', cursive;
 
 // Primary colour
 
-$col-pri-l: #c9c9c9;
-$col-pri-m: #4d4d4d;
-$col-pri-d: #262626;
-$col-highlight: #40E89A;
+$col-pri-l: #92a6c6;
+$col-pri-m: #3b4452;
+$col-pri-d: #1d2127;
+$col-highlight: #0061ff;
 
 // Basic Styles
 
@@ -41,18 +41,19 @@ body {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
+    font-family: $font-secondary;
 	color: white;
     display: inline-block; 
     width: 100%;
 }
 h1 {
     font-family: $font-impact;
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 20px;
 }
 h2 {
-    font-family: $font-fancy;
-    font-size: 2rem;
+    font-family: $font-impact;
+    font-size: 5rem;
     padding: 10px;
     margin: 0px;
 }
@@ -62,13 +63,20 @@ h3 {
 h4 {
     font-size: 1.2rem;    
 }
-a, p, li, ul, ol {
+a, li, ul, ol {
 	font-size: 1rem; 
+}
+p {
+    text-align: center;
+    line-height: 2;
+    font-size: 1.5rem;
+    margin: 10px 0px 10px 0px;    
 }
 a {
     color: $col-highlight;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
 }
 a:hover {
     text-decoration: none;
@@ -102,10 +110,10 @@ a {
 // Special Classes
     
 .no-padding {
-    padding: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
 }
 .no-margin {
-    margin: 0 0 0 0;
+    margin: 0px 0px 0px 0px;
 }
 .font-highlight {
 	color: $col-highlight;
