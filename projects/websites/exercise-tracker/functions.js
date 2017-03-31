@@ -1,6 +1,12 @@
 /*jslint browser: true*/
 /*global $, google, moment*/
 
+// Loader
+$(window).on('load', function () {
+    // Animate loader off screen
+    $(".loader").fadeOut("slow");
+});
+
 // Load the google maps API
 var x = document.createElement('script');
 x.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDMpPOmKlPN9xoweLbzA5e4WbDK-KDE6yM&callback=initMap';
