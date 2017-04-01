@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+html {
+    background-color: #f5f5dc;
+}
+body {
+    margin: 0 25%;
+    font-family: 'Merriweather', serif;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+h1 {
+    width: 100%;
+    background-color: #ccb25b;
+    font-size: 4em;
+    color: #3e3000;
+    border: 2px solid #3e3000;
+}
+h2 {
+    padding: 5%;
+    font-size: 3.5em;
+    color: #3e3000;
+}
+th {
+    color: #3e3000;
+    background-color: #ccb25b;
+     border: 1px solid #3e3000;
+}
+td {
+    color: #3e3000;
+    background-color: white;
+}
+.btn {
+    width: 100%;   
+}
+.error {
+    color: #ff4545;
+}
+.success {
+    color: #9b7800;
+}
+.form-control:focus {
+    border-color: #3e3000;
+    outline: 0;
+    box-shadow: inset 0 1px 1px #3e3000, 0 0 8px #3e3000;
+}
+.table-bordered>tbody>tr>th {
+    border: 2px solid #3e3000;   
+}
+#countdown, #score, #anagrams {
+    font-size: 1.5em;
+}
+#messages {
+    display: none;
+    font-size: 1.5em;
+}
+#endGame, #newWord, #checkAnagram, #startGame {
+    float: right;
+    background-color: #3e3000;
+    color: white;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+}
+#startGame {
+    float: left;
+}
+#endGame {
+    float: left;
+    display: none;
+}
+#newWord:hover, #checkAnagram:hover, #startGame:hover, #endGame:hover {
+    color: #3e3000;
+    background-color: #ccb25b;
+}
+#rules {
+    text-align: justify;   
+}
+#loader {
+    margin: 10px auto;
+    font-size: 40px;
+    color: #3e3000;
+}
+
+@media (max-width: 1023px) {
+    h1, h2 {
+        font-size: 2em;   
+    }
+    #countdown, #score {
+        font-size: 1em;
+    }
+    #endGame > span, #newWord > span, #startGame > span {
+        display: none;
+    }
+}
