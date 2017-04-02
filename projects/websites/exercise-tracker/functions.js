@@ -59,7 +59,7 @@ function initMap() {
     map.set('styles', normalStyle);
     
     // HTML5 zoom in on user's location -------------------------------------------------
-    if (navigator.geolocation) {
+    /*if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
                 lat: position.coords.latitude,
@@ -67,13 +67,11 @@ function initMap() {
             };
             map.setZoom(12);
             map.setCenter(pos);
-        }, function() {
-            //alert("Could not find location.");
         });
     } 
     else {
         alert("Could not find location.");
-    }
+    }*/
 
     // Find location based on user input using geolocater -------------------------------
     function geocodeAddress(geocoder, resultsMap) {

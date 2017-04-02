@@ -36,7 +36,6 @@ $(document).ready(function () {
             // Show on scroll up
             if (st > lastScrollTop) {
                 $(".collapse").addClass("fadeOut");
-                $(".dropdown-menu").removeClass("fadeIn");
                 $(".navbar").removeClass("slideInDown");
                 $(".navbar").addClass("slideOutUp");
                 $(".navbar").css({"background":"transparent","border-bottom":"0px"});
@@ -49,7 +48,7 @@ $(document).ready(function () {
                 $(".navbar").css({"background":"black","border-bottom":"2px solid white"});
             }
             // Remove style at page top
-            if(st < 100) {
+            if(st === 0 ) {
                 $(".navbar").css({"background":"transparent","border-bottom":"0px solid transparent"});
             }
         }
@@ -72,22 +71,6 @@ $(document).ready(function () {
 	});
 });
 
-// Smooth scroll to anchor on mousewheel
-/*$(document).ready(function () {
-    if ($(window).width() > 767) {
-        $('.row').on('mousewheel', function(e){
-            e.preventDefault();
-            if(e.originalEvent.wheelDelta < 0) {
-                 if (!$(this).is(':last-child')){
-                $('body').scrollTop($(this).next().offset().top);}
-            } else {
-                    if (!$(this).is(':first-child')){
-                    $('body').scrollTop($(this).prev().offset().top);}
-            }
-        });
-    }
-});*/
-
 // Fade in feature items
 $(document).ready(function() {
     // Every time the window is scrolled
@@ -101,7 +84,7 @@ $(document).ready(function() {
                 $(this).animate({'opacity':'1'},500);
             }
         }); 
-    });
+    });    
 });
 
 // Rating bar animation
@@ -122,6 +105,9 @@ $(document).ready(function() {
 // Add active class to dropdown
 $(document).ready(function() {
     $('.panel-heading').on('click', function() {
+        $(this).toggleClass('active');
+    });
+    $('.date').on('click', function() {
         $(this).toggleClass('active');
     });
 });

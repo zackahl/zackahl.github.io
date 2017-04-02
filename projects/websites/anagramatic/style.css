@@ -91,4 +91,7 @@ td {
     #endGame > span, #newWord > span, #startGame > span {
         display: none;
     }
+    #rules {
+        text-align: left;   
+    }
 }

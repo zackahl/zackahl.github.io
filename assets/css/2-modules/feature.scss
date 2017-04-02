@@ -165,7 +165,7 @@
         display: block;
         position: absolute;
         left: 0px;
-        top: 65%;
+        bottom: 10%;
         width: 100%;
         padding-left: 10%;
         padding-right: 10%;
@@ -410,6 +410,43 @@
     }
     .list-group {
         margin-bottom: 15px;
+        .date {
+            margin: 0 0 0 0;
+            cursor: pointer;
+            color: black;
+            background: white;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            span {
+                -webkit-transform: translateX(10px) translateY(-3px) rotate(180deg);
+                transform: translateX(10px) translateY(-3px) rotate(180deg);
+            }
+        }
+        .date.active {
+            color: white;
+            background: $col-pri-m;
+            .glyphicon {
+                color: white;
+            }
+        }
+        .date.active, .date:hover {
+            span {
+                -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+                transform: translateX(0px) translateY(0px) rotate(0deg);
+            }
+        }
+        .date:hover {
+            background: $col-pri-l;
+            color: black;
+            .glyphicon {
+                color: black;   
+            }
+        }
+        .glyphicon {
+            color: black;
+            font-size: 16px;
+            padding-left: 10px;    
+        }
     }
     .list-group-item {
         border-radius: 0px;
@@ -417,8 +454,8 @@
     }
     .list-group-item:hover {
         border-radius: 0px;  
-        background: $col-pri-m;
-        h4, span {
+        background: $col-pri-l;
+        span {
             color: white;   
         }
     }
@@ -433,8 +470,7 @@
         text-align: center;
     }
     a.external {
-        border: 2px solid white;
-        border-radius: 5px;
+        border: 1px solid white;
         line-height: 50px;
         cursor: pointer;
         background: $col-highlight;
@@ -483,12 +519,11 @@
         opacity: 1;
     }
     .heading-block {
-        margin-bottom: 10px;
         .font-highlight {
             color: white;   
         }
         width: 100%;
-        background: black;
+        background: $col-highlight;
     }
 	.col-xs-12, .col-sm-12 {
         padding-left: 0px;
@@ -502,7 +537,7 @@
 		display: none;
 	}
     #about-me, #skills, #projects, #blog, #contact {
-        background: white;
+        background: black;
 		.info-section {
 			border: none;
 			padding: 0px 15px 15px 15px;
@@ -512,22 +547,26 @@
             line-height: 30px;
             color: white;
             border: none;
+        }
+        h2 {
+            font-size: 2rem;
+            font-family: $font-impact; 
+        }
+        h3 {
             font-family: $font-secondary; 
         }
         p {
             font-size: 18px;
             text-align: center;
             line-height: 1.5;
-            color: black;
+            color: white;
         }
     }
 	#about-me {
 		margin-top: 50px;
-        h3 {
-            color: black;
-        }
         img {
-            width: 100%;   
+            width: auto;
+            margin-bottom: 20px;
         }
 	}
 	#skills {
