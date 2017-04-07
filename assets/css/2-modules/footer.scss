@@ -1,13 +1,15 @@
 /* FOOTER */
 
 #footer {
-	text-align: center;
-    background-color: black;
-	color: white;
-    padding: 5px 6vw 5px 6vw;
-	line-height: 40px;
-    bottom: 0 !Important;
+	bottom: 0 !Important;
+    display: block;
+    min-height: 50px;
+	padding: 5px 10% 5px 10%;
 	border-top: 2px solid white;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 40px;
 }
 
 // Social Media Buttons
@@ -16,9 +18,9 @@
     padding: 0 0 0 0;
     text-align: left;
     a {
-        font-size: 1.5rem;
-        padding-right: 10px;
+		padding-right: 10px;
         color: white;
+        font-size: 1.5rem;
     }
     a:hover {
         color: $col-highlight;
@@ -28,13 +30,13 @@
 // Bottom Page Navigation
 
 #bot-nav {
+	padding: 0 0 0 0;
     font-family: $font-secondary;
-    padding: 0 0 0 0;
     text-align: center;
     a {
         padding: 0px 3px 0px 3px;
+		color: white;
         font-size: 1rem;
-        color: white;
         text-decoration: none;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;

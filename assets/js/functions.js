@@ -35,21 +35,14 @@ $(document).ready(function () {
         if($(window).width() > 767) {
             // Show on scroll up
             if (st > lastScrollTop) {
-                $(".collapse").addClass("fadeOut");
-                $(".navbar").removeClass("slideInDown");
-                $(".navbar").addClass("slideOutUp");
-                $(".navbar").css({"background":"transparent","border-bottom":"0px"});
+				$('.navbar').removeClass("aos-animate");
+				$('.navbar[data-aos]').data("fade-down");
+				$('.navbar').css("opacity","0");
             // Hide on scroll down
             } else {
-                $(".collapse").removeClass("fadeOut");
-                $(".collapse").addClass("fadeIn");
-                $(".navbar").removeClass("slideOutUp");
-                $(".navbar").addClass("slideInDown");
-                $(".navbar").css({"background":"black","border-bottom":"2px solid white"});
-            }
-            // Remove style at page top
-            if(st === 0 ) {
-                $(".navbar").css({"background":"transparent","border-bottom":"0px solid transparent"});
+				$('.navbar').addClass("aos-animate");
+				$('.navbar[data-aos]').data("fade-up");
+				$('.navbar').css("opacity","1");
             }
         }
         lastScrollTop = st;
@@ -71,22 +64,6 @@ $(document).ready(function () {
 	});
 });
 
-// Fade in feature items
-$(document).ready(function() {
-    // Every time the window is scrolled
-    $(window).scroll( function() {
-        // Check the location of each desired element
-        $('.container-fluid').each( function() {
-            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/2);
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            // If the object is half visible in the window, fade it in
-            if( bottom_of_window > bottom_of_object ) {
-                $(this).animate({'opacity':'1'},500);
-            }
-        }); 
-    });    
-});
-
 // Rating bar animation
 $(document).ready(function() {
 	$('#html').hover(function(){$('#html-rating').css('width','90%');},function(){$('#html-rating').css('width','0%');});
@@ -95,8 +72,8 @@ $(document).ready(function() {
 	$('#jquery').hover(function(){$('#jquery-rating').css('width','80%');},function(){$('#jquery-rating').css('width','0%');});
 	$('#sass').hover(function(){$('#sass-rating').css('width','70%');},function(){$('#sass-rating').css('width','0%');});
     $('#browsers').hover(function(){$('#browsers-rating').css('width','80%');},function(){$('#browsers-rating').css('width','0%');});
-	$('#responsive').hover(function(){$('#responsive-rating').css('width','100%');},function(){$('#responsive-rating').css('width','0%');});
-    $('#brackets').hover(function(){$('#brackets-rating').css('width','100%');},function(){$('#brackets-rating').css('width','0%');});
+	$('#responsive').hover(function(){$('#responsive-rating').css('width','90%');},function(){$('#responsive-rating').css('width','0%');});
+    $('#brackets').hover(function(){$('#brackets-rating').css('width','90%');},function(){$('#brackets-rating').css('width','0%');});
     $('#bootstrap').hover(function(){$('#bootstrap-rating').css('width','90%');},function(){$('#bootstrap-rating').css('width','0%');});
     $('#photoshop').hover(function(){$('#photoshop-rating').css('width','80%');},function(){$('#photoshop-rating').css('width','0%');});
     $('#illustrator').hover(function(){$('#illustrator-rating').css('width','60%');},function(){$('#illustrator-rating').css('width','0%');});

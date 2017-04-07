@@ -1,7 +1,5 @@
 /* BASE */
 
-/* VARIABLES */
-
 // Font Family
 
 @import url('https://fonts.googleapis.com/css?family=Varela+Round|Fugaz+One|Monoton');
@@ -11,51 +9,47 @@ $font-impact: 'Monoton', cursive;
 
 // Primary colour
 
-$col-pri-l: #92a6c6;
-$col-pri-m: #3b4452;
-$col-pri-d: #1d2127;
-$col-highlight: #0061ff;
+$col-pri-l: #fce6aa;
+$col-pri-m: #8d8161;
+$col-pri-d: #3c382b;
+$col-sec-l: #a0a0a0;
+$col-sec-m: #646464;
+$col-sec-d: #3e3e3e;
+$col-highlight: #ebc14d;
 
 // Basic Styles
 
 html {
     min-height: 100%;
-    background: black;
 	font-size: 14px;
+    background: black;
 }
 body {
-    font-family: $font-primary;
-	color: white;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	background: black;
+	color: white;
+	font-family: $font-primary;
 } 
-#content {
-	padding-right: 0px;
-	padding-left: 0px;
-	margin-right: auto;
-	margin-left: auto;
-    min-height: 100%;
-    position: relative; 
-}
 
 // Typography
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-secondary;
-	color: white;
-    display: inline-block; 
+	display: inline-block; 
     width: 100%;
+	color: white;
+	font-family: $font-secondary;
 }
 h1 {
+	margin-bottom: 20px;
     font-family: $font-impact;
     font-size: 6rem;
-    margin-bottom: 20px;
 }
 h2 {
+	padding: 10px;
+    margin: 0px;
     font-family: $font-impact;
     font-size: 5rem;
-    padding: 10px;
-    margin: 0px;
 }
 h3 {
     font-size: 1.5rem;    
@@ -67,44 +61,36 @@ a, li, ul, ol {
 	font-size: 1rem; 
 }
 p {
+	margin: 10px 0px 10px 0px;  
     text-align: center;
-    line-height: 2;
-    font-size: 1.5rem;
-    margin: 10px 0px 10px 0px;    
+    line-height: 2;  
 }
 a {
     color: $col-highlight;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
     text-decoration: none;
+	-webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 a:hover {
+	color: white;
     text-decoration: none;
-    color: black;
 }
-.glyphicon, .ion {
+.glyphicon {
     color: white;
     font-size: 30px; 
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
-.glyphicon:hover, .ion:hover {
+.glyphicon:hover {
     color: $col-highlight; 
     font-size: 36px; 
 }
-
 ::selection {
-  background: $col-pri-l; /* WebKit/Blink Browsers */
+	background: $col-pri-l;
 }
 ::-moz-selection {
-  background: $col-pri-l; /* Gecko Browsers */
-}
-
-// Links
-
-a {
-    text-decoration: none;
+	background: $col-pri-l;
 }
 
 // Special Classes
@@ -120,25 +106,25 @@ a {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
+.shadow-filter {
+	-webkit-filter: drop-shadow(0px 0px 0px black);
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	
+}
+.shadow-filter:hover {
+	-webkit-filter: drop-shadow(0px 0px 5px $col-highlight);
+}
 
 // Loader 
 
-.no-js #loader { 
-    display: none;
-}
-.js #loader { 
-    display: block;
-    position: absolute;
-    left: 100px;
-    top: 0;
-}
 .loader {
 	position: fixed;
-	left: 0px;
+	z-index: 9999;
 	top: 0px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 9999;
 	background: url(/assets/images/loader.gif) center no-repeat black;
 }
 
@@ -169,8 +155,5 @@ a {
 	}
 	h2 {
 		font-size: 1.5rem;
-	}
-	#scroll {
-        left: calc(50% - 15px);
 	}
 }
