@@ -1,6 +1,6 @@
 /* NAVIGATION */
 
-// Navbar
+/* Navbar */
 
 .navbar {
 	min-height: auto;
@@ -18,7 +18,7 @@
     }
 }
 
-// Navbar Header
+/* Navbar Header */
 
 .navbar-header {
     float: left;
@@ -28,7 +28,6 @@
 		padding: 0px 20px 0px 0px;
         color: white;
         font-size: 1.5rem;
-        -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
     .navbar-brand:hover, .navbar-brand:focus {
@@ -37,14 +36,13 @@
     }
 }
 
-// Navbar collapse
+/* Navbar collapse */
 
 .navbar-collapse {
     float: left;
     .nav > li > a:hover, .nav > li > a:focus, #nav-logo:hover {
         background-color: transparent;
         color: $col-highlight;
-        -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
     .nav > li:hover {
@@ -64,7 +62,7 @@
     }
 }
 
-// Brand
+/* Brand */
 
 #brand {
 	position: absolute;
@@ -75,16 +73,13 @@
     }
 }
 
-// Social Media Buttons
+/* Social Media Buttons */
 
 #nav-social {
     float: right;
-    a:hover {
-        color: white   
-    }
 }
 
-// Mobile Devices
+/* Mobile Devices */
 
 @media (max-width: 767px) {
     .navbar {
@@ -106,7 +101,6 @@
             width: 22px;
             border-radius: 1px;
             background-color: white;
-            -webkit-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
         }
         button:hover > .icon-bar {

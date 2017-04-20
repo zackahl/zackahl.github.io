@@ -88,3 +88,8 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 });
+
+// Tooltip
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});

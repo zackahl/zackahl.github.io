@@ -1,33 +1,30 @@
 /* FOOTER */
 
 #footer {
-	bottom: 0 !Important;
+	bottom: 0 !important;
     display: block;
     min-height: 50px;
-	padding: 5px 10% 5px 10%;
+	padding: 0 10%;
 	border-top: 2px solid white;
 	background: black;
 	color: white;
 	text-align: center;
-	line-height: 40px;
+	line-height: 50px;
 }
 
-// Social Media Buttons
+/* Social Media Buttons */
 
 #social-media {
     padding: 0 0 0 0;
     text-align: left;
     a {
 		padding-right: 10px;
-        color: white;
         font-size: 1.5rem;
-    }
-    a:hover {
-        color: $col-highlight;
+        line-height: 50px;
     }
 }
 
-// Bottom Page Navigation
+/* Bottom Page Navigation */
 
 #bot-nav {
 	padding: 0 0 0 0;
@@ -35,25 +32,20 @@
     text-align: center;
     a {
         padding: 0px 3px 0px 3px;
-		color: white;
         font-size: 1rem;
         text-decoration: none;
-        -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
-    }
-     a:hover {
-        color: $col-highlight;
     }
 }
 
-// Copyright
+/* Copyright */
 
 #copyright {
     padding: 0 0 0 0;
     text-align: right;
 }
 
-// Mobile Devices
+/* Mobile Devices */
 
 @media (max-width: 767px) {
     #footer {
