@@ -1,0 +1,33 @@
+#blogs-page {
+	background-color: black;
+    background: linear-gradient($col-sec-d 50%, black 100%);
+	.date {
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+		background: white;
+		color: black;
+		line-height: 40px;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+	}
+	.date.active, .date:hover {
+		background: $col-pri-l;
+		color: black;
+		.arrow {
+			span {
+				background: black;
+			}
+		}
+	}
+	.list-group {
+		margin-bottom: 0;
+	}
+	.list-group-item {
+		border: 0px;
+        border-radius: 0px;
+    }
+    .list-group-item:hover {
+        border-radius: 0px;  
+        background: $col-pri-l;
+    }
+}

@@ -25,13 +25,13 @@
 		background: $col-highlight;
         color: black;
         text-align: center;
-        a {
-            font-size: 1.5rem;
-        }
-        a:hover {
-            color: white;   
-        }
+		transition: 0.3s ease-in-out;
     }
+	a:hover > h3 {
+		background: black;
+		color: white;
+		letter-spacing: 2px;
+	}
     .fa {
         margin-left: 10px;
     }
@@ -79,12 +79,10 @@
 		}
 	}
 }
-.heading-block:hover {
-    a > h2 {
-		color: $col-highlight;
-		.font-highlight {
-			color: white;   
-		}
+.heading-block > a > h2:hover {
+	color: $col-highlight;
+	.font-highlight {
+		color: white;   
 	}
 }
 
@@ -200,15 +198,15 @@
 			padding: 10px;
 			background: $col-highlight;
 			color: black;
-			letter-spacing: 2px;
 			cursor: pointer;
 			transition: 0.3s ease-in-out;
 			.fa {
 				margin: 0 0 0 0;
 			}
 		}
-		a:hover, a:focus {
+		a:hover{
 			background: white;
+			letter-spacing: 2px;
 			text-decoration: none;
 		}
 	}
@@ -345,12 +343,19 @@
     background-color: black;
     background: linear-gradient($col-sec-m 50%, $col-sec-d 100%);
     h4 {
+		padding: 5px 5px 0px 5px;
         color: black;
-		line-height: 50px;
+		line-height: 30px;
+		white-space: nowrap;
+		overflow: hidden;
         transition: 0.3s ease-in-out;
     }
+	img {
+		opacity: 1;
+		transition: 0.3s ease-in-out;
+	}
     .panel-group {
-        margin: 0px 0 0 0;
+        margin: 0 0 0 0;
         .glyphicon {
 			padding-left: 10px;
             color: black;
@@ -360,7 +365,7 @@
     .panel {
 		border: 0px;
 		border-radius: 0px;
-        margin: 0px 0 0 0; 
+        margin: 0 0 0 0; 
     }
     .panel-heading {
 		padding: 0px;
@@ -369,39 +374,40 @@
         color: black;
 		cursor: pointer;
         transition: 0.3s ease-in-out;
-        span {
-            transform: translateX(10px) translateY(-3px) rotate(180deg);
-        }
     }
     .panel-heading.active {
-        background: $col-pri-d;
-        h4, span {
-            color: white;
-        }
+		h4 {
+			font-family: $font-secondary;
+		}
     }
     .panel-heading.active, .panel-heading:hover {
-        span {
-            transform: translateX(0px) translateY(0px) rotate(0deg);
-        }
-    }
-    .panel-heading:hover {
-        background: $col-pri-m;
-        h4, span {
-            color: white;
-        }
+		background: $col-pri-l;
+		h4 {
+			color: black;
+		}
+		.arrow {
+			span {
+				background: black;
+			}
+		}
     }
     .panel-title {
+		width: 90%;
+		margin: 0 5%;
         font-family: $font-primary;
+		text-overflow: ellipsis;
         text-align: center;
     }
     .panel-body {
 		display: flex;
-        min-height: 200px;
-        padding: 5px 5px 0 5px;
+        height: 200px;
+        padding: 5px;
+		overflow: hidden;
         align-items: center;
         justify-content: center;
         .cp_embed_wrapper {
             width: 100%;
+			height: 190px;
         }
     }
     .panel-footer {
@@ -410,7 +416,7 @@
         a {
 			display: block;
             width: 100%;
-			background: $col-highlight;
+			background: $col-pri-l;
             color: black;
             font-size: 1rem;
             line-height: 2rem;
@@ -418,7 +424,7 @@
             transition: 0.3s ease-in-out;
         }
         a:hover {
-            background: $col-pri-l;
+            background: $col-highlight;
             font-size: 0.9rem;
         }
     }
@@ -427,51 +433,67 @@
         text-align: center; 
     }
     #websites {
-        a {
-			float: left;
-            width: 50%;
-        }
+		.panel-body {
+			img {
+				padding: 5px;
+				width: 100%;
+				height: 190px;
+			}
+			span {
+				position: absolute;
+				width: 80%;
+				opacity: 0;
+				transition: 0.3s ease-in-out;
+			}
+		}
+		.panel-body:hover {
+			img {
+				opacity: 0.2;
+				transform: scale(1.5);
+				filter: grayscale(1);
+			}
+			span {
+				opacity: 1;
+			}
+		}
+		.panel-footer {
+			a {
+				float: left;
+				width: 50%;
+			}
+		}
     }
+	#graphics {
+		img:hover {
+			transform: scale(1.2);
+		}	
+	}
 }
 
-/* Blog */
+/* Blogs */
 
-#blog {
+#blogs {
     background-color: black;
     background: linear-gradient($col-sec-d 50%, black 100%);
-    .info-section {
-        text-align: center;
-    }
     .list-group {
         margin-bottom: 5px;
         .date {
+			padding: 0 0 0 0;
 			margin: 0 0 0 0;
 			background: white;
 			color: black;
+			line-height: 40px;
 			cursor: pointer;
 			transition: 0.3s ease-in-out;
-			span {
-				transform: translateX(10px) translateY(-3px) rotate(180deg);
-			}
-        }
-        .date.active {
-			background: $col-pri-m;
-            color: white;
-            .glyphicon {
-                color: white;
-            }
         }
         .date.active, .date:hover {
-            span {
-                transform: translateX(0px) translateY(0px) rotate(0deg);
-            }
-        }
-        .date:hover {
             background: $col-pri-l;
             color: black;
-            .glyphicon {
-                color: black;   
-            }
+			.arrow {
+				span {
+					background: black;
+				}
+			}
         }
         .glyphicon {
 			padding-left: 10px; 
@@ -503,19 +525,6 @@
 	}
     .info-section {
         text-align: center;
-    }
-    a.external {
-		padding: 10px;
-        background: $col-highlight;
-        color: black;
-        font-size: 1.5rem;
-		line-height: 50px;
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
-    }
-    a.external:hover {
-        background: $col-pri-l;
-        font-size: 1.4rem;
     }
 }
 
@@ -648,5 +657,15 @@
         .panel-footer {
             background: rgba(200, 200, 200, 0.5);  
         }
+		#websites {
+			.panel-body {
+				img {
+					display: none;
+				}
+				span {
+					opacity: 1;
+				}
+			}
+		}
     }
 }

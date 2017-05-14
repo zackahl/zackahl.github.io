@@ -62,6 +62,24 @@
     }
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+	min-width: 100px;
+	background: rgba(0, 0, 0, 0.8);
+	border: 2px solid $col-highlight;
+	border-top: 0;
+	border-radius: 0;
+	li {
+		a {
+			color: white;
+			&:hover {
+				background: transparent;
+				color: $col-highlight;
+			}
+		}
+	}
+}
+
 /* Brand */
 
 #brand {
@@ -69,7 +87,7 @@
     top: 0;
     left: calc(50% - 50px);
     img {
-        height: 100px;
+        height: 75px;
     }
 }
 
@@ -89,23 +107,36 @@
     .navbar-header {
 		width: 100%;
         padding: 0px 10% 0px 10%;
-        button {
+        #menu {
             float: right;
 			padding-right: 0px;
             margin-right: 0px;
         }
         // Toggle
-        .navbar-toggle > .icon-bar {
+        #menu.navbar-toggle > .icon-bar {
             display: block;
 			height: 2px;
-            width: 22px;
+            width: 24px;
             border-radius: 1px;
             background-color: white;
             transition: 0.3s ease-in-out;
         }
-        button:hover > .icon-bar {
+        #menu:hover > .icon-bar {
             background-color: $col-highlight;
         }
+		#menu.active {
+			span {
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(1) {
+					transform: translateY(6px) rotate(45deg);
+				}
+				&:nth-child(3) {
+					transform: translateY(-6px) rotate(-45deg);
+				}
+			}
+		}
     }
     .navbar-collapse {
 		width: 100%;

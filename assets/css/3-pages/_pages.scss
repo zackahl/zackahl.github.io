@@ -1,0 +1,32 @@
+@import "_websites";
+@import "_graphics";
+@import "_blogs";
+
+#websites-page, #graphics-page, #blogs-page {
+	.container-fluid {
+		padding-bottom: 7%;
+	}
+	img {
+		filter: grayscale(1);
+		transition: 0.3s ease-in-out;
+	}
+	img:hover {
+		filter: grayscale(0);
+	}
+}
+
+@media (max-width: 767px) {
+	#websites-page, #graphics-page, #blogs-page {
+		.container-fluid {
+			padding-bottom: 0;
+		}
+		h2 {
+			margin-top: 50px;
+			font-size: 2rem;
+            font-family: $font-secondary;
+			.font-highlight {
+				color: black;
+			}
+        }
+	}
+}

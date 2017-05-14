@@ -92,7 +92,7 @@ a:hover, a:focus {
 }
 
 /* Special Classes */
-    
+
 .no-padding {
     padding: 0px 0px 0px 0px;
 }
@@ -111,6 +111,43 @@ a:hover, a:focus {
 }
 .shadow-filter:hover {
 	filter: drop-shadow(0px 0px 5px $col-highlight);
+}
+.arrow {
+	width: 1.2rem;
+	height: 20px;
+	display: inline-block;
+	position: relative;
+	margin: 0 5px;
+	span {
+		position: absolute;
+		top: 0.75rem;
+		width: .75rem;
+		height: 3px;
+		display: inline-block;
+		background: black;
+		transition: all .2s ease;
+		&:first-of-type {
+			left: 0;
+			transform: rotate(45deg);
+		}
+		&:last-of-type {
+			right: 0;
+			transform: rotate(-45deg);
+		}
+	}
+}
+.active {
+	.arrow {
+		span {
+			background: white;
+			&:first-of-type {
+				transform: rotate(-45deg);
+			}
+			&:last-of-type {
+				transform: rotate(45deg);
+			}
+		}
+	}
 }
 
 /* Loader */

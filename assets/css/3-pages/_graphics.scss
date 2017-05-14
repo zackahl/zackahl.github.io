@@ -1,0 +1,64 @@
+#graphics-page {
+	background-color: black;
+    background: linear-gradient($col-sec-d 50%, black 100%);
+	img {
+		background: white;
+		padding: 10px;
+	}
+}
+
+#lightboxOverlay {
+	background: $col-highlight;
+}
+#lightbox {
+	$size: 60%;
+	.lb-outerContainer {
+		width: $size !important;
+		height: $size !important;
+	}
+	.lb-image {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.lb-dataContainer {
+		width: $size !important;
+	}
+	.lb-data {
+		padding: 0 !important;
+	}
+	.lb-details {
+		padding: 5px 10px !important;
+		background: $col-pri-d !important;
+		width: 100% !important;
+		line-height: 2em !important;
+		border-radius: 4px !important;
+	}
+	.lb-caption {
+		font-family: $font-secondary !important;
+		font-size: 2em !important;
+		font-weight: 100 !important;
+		color: white !important;
+	}
+	.lb-number {
+		padding: 0 !important;
+		float: right !important;
+		font-size: 1em !important;
+		font-family: $font-primary !important;
+		color: white !important;
+	}
+	.lb-closeContainer {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	#lightbox {
+		.lb-outerContainer {
+			width: 100% !important;
+			height: 100% !important;
+		}
+		.lb-dataContainer {
+			width: 100% !important;
+		}
+	}
+}
