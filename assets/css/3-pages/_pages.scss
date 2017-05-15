@@ -17,8 +17,18 @@
 
 @media (max-width: 767px) {
 	#websites-page, #graphics-page, #blogs-page {
+		background: $col-sec-m;
 		.container-fluid {
 			padding-bottom: 0;
+		}
+		.info-section {
+			padding: 0px 15px 15px 15px;
+			border: none;
+			text-align: center;
+			h3 {
+				background: black;
+				color: white;
+			}
 		}
 		h2 {
 			margin-top: 50px;

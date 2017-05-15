@@ -82,6 +82,7 @@ $(document).ready(function () {
     $('#bootstrap').hover(function(){$('#bootstrap-rating').css('width','90%');},function(){$('#bootstrap-rating').css('width','0%');});
     $('#photoshop').hover(function(){$('#photoshop-rating').css('width','80%');},function(){$('#photoshop-rating').css('width','0%');});
     $('#illustrator').hover(function(){$('#illustrator-rating').css('width','60%');},function(){$('#illustrator-rating').css('width','0%');});
+	$('#affinity').hover(function(){$('#affinity-rating').css('width','80%');},function(){$('#affinity-rating').css('width','0%');});
 
 	// Add active class to dropdown and collapse siblings
     $('.panel-heading').on('click', function() {
