@@ -107,7 +107,7 @@
 
 #home {
     background-color: black;
-	background-image: url(/assets/images/home.jpeg);
+	background-image: url(/assets/images/home-min.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -196,8 +196,9 @@
 		margin: 0px auto;
 		a {
 			padding: 10px;
-			background: $col-highlight;
-			color: black;
+			background: black;
+			border: 2px solid white;
+			color: white;
 			cursor: pointer;
 			transition: 0.3s ease-in-out;
 			.fa {
@@ -206,6 +207,7 @@
 		}
 		a:hover{
 			background: white;
+			color: black;
 			letter-spacing: 2px;
 			text-decoration: none;
 		}
@@ -226,16 +228,23 @@
     }
 }
 
+#content {
+	background: black;
+	background-image: url(/assets/images/gradient-min.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-position: center;
+}
+
 /* About Me */
 
 #about-me {
-    background-color: black;
-    background: linear-gradient(black 50%, $col-sec-d 100%);
     img {
 		float: right;
         width: 250px;
 		border: 4px solid $col-highlight;
         margin: 1% auto;
+		transition: 0.3s ease-in-out;
     }
     h3 {
         color: white;
@@ -249,8 +258,6 @@
 /* Skills */
 
 #skills {
-    background-color: black;
-    background: linear-gradient($col-sec-d 50%, $col-sec-m 100%);
     img {
 		position: relative;
         top: 50%;
@@ -343,8 +350,6 @@
 /* Projects */
 
 #projects {
-    background-color: black;
-    background: linear-gradient($col-sec-m 50%, $col-sec-d 100%);
     h4 {
 		padding: 5px 5px 0px 5px;
         color: black;
@@ -476,11 +481,9 @@
 /* Blogs */
 
 #blogs {
-    background-color: black;
-    background: linear-gradient($col-sec-d 50%, black 100%);
     .list-group {
         margin-bottom: 5px;
-        .date {
+        .year {
 			padding: 0 0 0 0;
 			margin: 0 0 0 0;
 			background: white;
@@ -489,7 +492,7 @@
 			cursor: pointer;
 			transition: 0.3s ease-in-out;
         }
-        .date.active, .date:hover {
+        .year.active, .year:hover {
             background: $col-pri-l;
             color: black;
 			.arrow {
@@ -522,7 +525,6 @@
 /* Contact */
 
 #contact {
-    background-color: black;
 	.container-fluid {
     	padding: 7% 0% 7% 0%;
 	}

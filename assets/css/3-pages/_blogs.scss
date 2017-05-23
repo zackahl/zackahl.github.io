@@ -1,7 +1,5 @@
 #blogs-page {
-	background-color: black;
-    background: linear-gradient($col-sec-d 50%, black 100%);
-	.date {
+	.year {
 		padding: 0 0 0 0;
 		margin: 0 0 0 0;
 		background: white;
@@ -10,7 +8,7 @@
 		cursor: pointer;
 		transition: 0.3s ease-in-out;
 	}
-	.date.active, .date:hover {
+	.year.active, .year:hover {
 		background: $col-pri-l;
 		color: black;
 		.arrow {
@@ -33,6 +31,7 @@
 	
 	.blog {
 		img {
+			margin-top: 15px;
 			filter: grayscale(0);
 		}
 		h2 {
@@ -40,28 +39,35 @@
 			font-size: 4rem;
 			font-family: $font-secondary;
 		}
-		p {
+		a, p {
 			font-size: 1.2rem;
 			text-align: justify;
 		}
 		a {
 			color: $col-highlight;
-			font-size: 1.2rem;
+		}
+		.date {
+			padding: 5px;
+			text-align: right;
+			font-family: $font-secondary;
 		}
 	}
 }
 @media (max-width: 767px) {
 	#blogs-page {
 		.blog {
+			img {
+				display: none;
+			}
 			h2 {
 				font-size: 2rem;
 			}
-			p {
+			a, p {
 				font-size: 1rem;
 				text-align: center;
 			}
-			img {
-				display: none;
+			.date {
+				text-align: center;
 			}
 		}
 	}

@@ -3,6 +3,11 @@
 @import "_blogs";
 
 #websites-page, #graphics-page, #blogs-page {
+	background: black;
+	background-image: url(/assets/images/gradient-min.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    background-position: top;
 	.container-fluid {
 		padding-bottom: 7%;
 	}

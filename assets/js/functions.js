@@ -91,7 +91,7 @@ $(document).ready(function () {
 		group.find(".panel-collapse").removeClass("in");
 		$(this).addClass('active');
     });
-    $('.date').on('click', function() {
+    $('.year').on('click', function() {
         $(this).toggleClass('active');
     });
 
