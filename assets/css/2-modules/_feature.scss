@@ -389,7 +389,7 @@
 		}
     }
     .panel-heading.active, .panel-heading:hover {
-		background: $col-pri-l;
+		background: $col-pri-vl;
 		h4 {
 			color: black;
 		}
@@ -510,10 +510,13 @@
     .list-group-item {
 		border: 0px;
         border-radius: 0px;
+		color: black;
+		h4 {
+			color: black;
+		}
     }
     .list-group-item:hover {
-        border-radius: 0px;  
-        background: $col-pri-l;
+        background: $col-pri-vl;  
     }
 	#web-tips {
 		.list-group {

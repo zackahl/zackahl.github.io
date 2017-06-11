@@ -6,7 +6,7 @@
 }
 
 #lightboxOverlay {
-	background: $col-highlight;
+	background: black;
 }
 #lightbox {
 	$size: 60%;
@@ -26,7 +26,7 @@
 	}
 	.lb-details {
 		padding: 5px 10px !important;
-		background: $col-pri-d !important;
+		background: $col-sec-d !important;
 		width: 100% !important;
 		line-height: 2em !important;
 		border-radius: 4px !important;

@@ -11,6 +11,9 @@
 	.container-fluid {
 		padding-bottom: 7%;
 	}
+	.feature {
+		min-height: calc(100vh - 55px);
+	}
 	img {
 		filter: grayscale(1);
 		transition: 0.3s ease-in-out;

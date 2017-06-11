@@ -9,6 +9,7 @@ $font-impact: 'Monoton', cursive;
 
 /* Primary colour */
 
+$col-pri-vl: #ffecb7;
 $col-pri-l: #fad778;
 $col-pri-m: #897848;
 $col-pri-d: #413b26;
@@ -178,10 +179,10 @@ a:hover, a:focus {
 }
 ::-webkit-scrollbar-thumb
 {
-	background-color: $col-highlight;
+	background-color: white;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background-color: white;
+	background-color: $col-highlight;
 }
 
 /* Mobile devices */
