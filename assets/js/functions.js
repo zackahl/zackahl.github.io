@@ -59,8 +59,12 @@ $(document).ready(function () {
 
 	// Smooth scroll to anchor on click
 	$('body .ss').on('click', function(event) {
-            event.preventDefault();
-            $('body').animate({scrollTop:$(this.hash).offset().top}, 500);
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({scrollTop:target.offset().top}, 300);
+            }
 	});
 	
 	// Navbar dropdown transition
